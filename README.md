@@ -22,12 +22,14 @@ DB_PASSWORD=[your_db_password]
     - method : POST
     - choose Body -> form-data
     - fill this data
-        - value : name, key : [your name]
-        - value : email, key : [your email]
-        - value : password, key : [your pasword]
-        - value : password_confirmation, key : [your pasword]
+    ```
+        name : [your name]
+        email : [your email]
+        password : [your pasword]
+        password_confirmation : [your pasword]
+    ```
     - response
-```
+    ```
     {
     "code": 200,
     "status": "success",
@@ -44,15 +46,16 @@ DB_PASSWORD=[your_db_password]
     },
     "message": "User Registered"
     }
-```
+    ```
     - if success register new user, then Login using email & password
-```
+
+    ```
     {
         "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYyNjc2ODczNSwiZXhwIjoxNjI2NzcyMzM1LCJuYmYiOjE2MjY3Njg3MzUsImp0aSI6IjZnbHlkUHpXcFFRZk1WTmkiLCJzdWIiOiJlN2ZlYzZmYi0yZDRhLTQxNmMtOTY2ZC02ZjJjNTYyMjY4NTgiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.LiJuXawsEXYmkzafYyps9FUePgHbIug1Zbl4emSVhxs",
         "token_type": "bearer",
         "expires_in": 3600
     }    
-```
+    ```
     - save the access_token
     - For example, try to access GET['http://127.0.0.1:8000/api/me']
     - response = Unautorized
