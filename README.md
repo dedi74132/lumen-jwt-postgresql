@@ -2,7 +2,7 @@
 
 Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
 
-This project to create Authentication (Register & Login) Users using JWT-AUTH as authentication token and Postgresql as database
+This project to create a basic authentication (Register & Login) Users using JWT-AUTH as authentication token and Postgresql as database
 ## Database Structure 
 - open root app and run "npm install"
 - custom .env file using this data
