@@ -6,15 +6,14 @@ This project to create Authentication (Register & Login) Users using JWT-AUTH as
 ## Database Structure 
 - open root app and run "npm install"
 - custom .env file using this data
-[code]
+```
 DB_CONNECTION="pgsql"
 DB_HOST="localhost"
 DB_PORT="5432"
 DB_DATABASE=[your_db_name]
 DB_USERNAME=[your_db_username]
 DB_PASSWORD=[your_db_password]
-[/code]
-
+```
 - Create new database Postgresql
 - Running Migration "php artisan migrate"
 - Running Server "php artisan serve"
@@ -28,7 +27,7 @@ DB_PASSWORD=[your_db_password]
         - value : password, key : [your pasword]
         - value : password_confirmation, key : [your pasword]
     - response
-    [code]
+```
     {
     "code": 200,
     "status": "success",
@@ -45,16 +44,15 @@ DB_PASSWORD=[your_db_password]
     },
     "message": "User Registered"
     }
-    [/code]
-
+```
     - if success register new user, then Login using email & password
-    [code]
+```
     {
         "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYyNjc2ODczNSwiZXhwIjoxNjI2NzcyMzM1LCJuYmYiOjE2MjY3Njg3MzUsImp0aSI6IjZnbHlkUHpXcFFRZk1WTmkiLCJzdWIiOiJlN2ZlYzZmYi0yZDRhLTQxNmMtOTY2ZC02ZjJjNTYyMjY4NTgiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.LiJuXawsEXYmkzafYyps9FUePgHbIug1Zbl4emSVhxs",
         "token_type": "bearer",
         "expires_in": 3600
     }    
-    [/code]
+```
     - save the access_token
     - For example, try to access GET['http://127.0.0.1:8000/api/me']
     - response = Unautorized
